@@ -1,0 +1,8 @@
+
+<view class='whole'>
+<view class='container'>
+<text style='font-weight:bold;font-size:50rpx;'>教室的学生人数变化</text>
+<canvas class = "canvas" id="chart3"
+canvas-id="number"></canvas>
+</view>
+</view>

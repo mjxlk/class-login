@@ -1,0 +1,8 @@
+<view class='whole'>
+<view class='container'>
+<text style='font-weight:bold;font-size:50rpx'>已离开学生学号及时间</text>
+<view wx:for="{{LEFT.datapoints}}">
+{{item.value}}--------{{item.at}}
+</view>
+</view>
+</view>

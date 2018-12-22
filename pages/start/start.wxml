@@ -1,0 +1,27 @@
+<view class='whole'>
+<view class='container'>
+<text style='font-weight:bold;font-size:50rpx;'>智能打卡,高效上课</text>
+ <view class="g-bda-userinfo">
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<button class="btn1" bindtap="getDataFromOneNetNumber" >
+学生人数变化图表</button>
+<button class="btn1" bindtap="getDataFromOneNetENTER" >
+已签到学生及时间</button>
+<button class="btn1" bindtap="getDataFromOneNetLEFT" >
+已离开学生及时间</button>
+
+</view>
+</view>
+
+
+
+  
+
+       
+
+
+
+    
