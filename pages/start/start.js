@@ -6,19 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    opacity: 0.4,
-    disabled: true,
-    threshold: 0,
-    rule: 'up',
-    items: [
-      { name: 'up', value: '高于门限报警' ,checked:'ture'},
-      { name: 'down', value: '低于门限报警' },
-    ]
+
   },
 
   getDataFromOneNetNumber: function(){
     var that=this
-    //从oneNET请求我们的Wi-Fi气象站的数据
+    //从oneNET请求我们的人数变化的数据
     const requestTask = wx.request({
       url: 'https://api.heclouds.com/devices/503069569/datapoints?datastream_id=number,ENTER,LEFT&limit=15',
       header: {
@@ -33,7 +26,7 @@ Page({
         app.globalData.LEFT = res.data.data.datastreams[1]
         app.globalData.ENTER = res.data.data.datastreams[2]
         console.log(app.globalData.LEFT)
-        //跳转到天气页面，根据拿到的数据绘图
+        //跳转到number页面，根据拿到的数据绘图
         wx.navigateTo({
           url: '../qiandao/number/number',
         })
@@ -52,7 +45,7 @@ Page({
  
   getDataFromOneNetENTER: function () {
     var that = this
-    //从oneNET请求我们的Wi-Fi气象站的数据
+    //从oneNET请求我们的人数变化的数据
     const requestTask = wx.request({
       url: 'https://api.heclouds.com/devices/503069569/datapoints?datastream_id=number,ENTER,LEFT&limit=15',
       header: {
@@ -67,7 +60,7 @@ Page({
         app.globalData.LEFT = res.data.data.datastreams[1]
         app.globalData.ENTER = res.data.data.datastreams[2]
         console.log(app.globalData.LEFT)
-        //跳转到天气页面，根据拿到的数据绘图
+        //跳转到ENTER页面
         wx.navigateTo({
           url: '../qiandao/ENTER/ENTER',
         })
@@ -89,7 +82,7 @@ Page({
 
 
     var that = this
-    //从oneNET请求我们的Wi-Fi气象站的数据
+    //从oneNET请求我们的人数变化的数据
     const requestTask = wx.request({
       url: 'https://api.heclouds.com/devices/503069569/datapoints?datastream_id=number,ENTER,LEFT&limit=15',
       header: {
@@ -104,7 +97,7 @@ Page({
         app.globalData.LEFT = res.data.data.datastreams[1]
         app.globalData.ENTER = res.data.data.datastreams[2]
         console.log(app.globalData.LEFT)
-        //跳转到天气页面，根据拿到的数据绘图
+        //跳转到LEFT页面
         wx.navigateTo({
           url: '../qiandao/LEFT/LEFT',
         })
